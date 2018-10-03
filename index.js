@@ -1,7 +1,7 @@
 const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
 
 function append(header, ret) {
-  const h = document.createElement("h3");
+  const h = document.createElement("div");
   const p = document.createElement("p");
   let k = document.createTextNode(header);
   let n = document.createTextNode(ret);
@@ -166,3 +166,63 @@ function kata13(){
 }
 
 append("14. Display the square of each element in sampleArray ", kata14())
+
+function kata14(){
+
+
+
+  return sampleArray.map(element => Math.pow(element, 2)).join(" ")
+
+}
+append("15. Display sum of all the numbers from 1 to 20 ", kata15())
+
+function kata15(){
+  let x= 0;
+  for(let i = 1; i<=20; i++){
+  
+    x =x+i;
+  }return x;
+}
+
+append("16. Display all of the sums of a sampleArray", kata16())
+
+function kata16(){
+  let sum=0;
+
+  for(let i = 0; i < sampleArray.length; i++){
+    sum += sampleArray[i];
+  }
+  return sum;
+}
+
+append("17. Display the smallest element in sampleArray", kata17())
+
+ function kata17(){
+ 
+    return Math.min(...sampleArray);
+ }
+append("18. Display the largest element in sampleArray", kata18())
+
+function kata18(){
+
+  return Math.max(...sampleArray);
+}
+
+function kata19(){
+  
+   for(i=1; i<=3; i++) {
+    // Create a div, with class "bar", and set the width to 100px.
+    var newElement = document.createElement("div");
+    newElement.className = "bar";
+    newElement.style.width = i*100 + "px";
+
+    // Place a text label inside the new div.
+    var newText = document.createTextNode("Bar #" + i);
+    newElement.appendChild(newText);
+
+    // Put the new div on the page inside the existing element "d1".
+    var destination = document.getElementById("d1");
+    destination.appendChild(newElement);
+  }
+}
+kata19()
